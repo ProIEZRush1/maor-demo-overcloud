@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#6d35ee">
+  <title>Demo conceptual — Plataforma Maor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="demo-ribbon"><b>DEMO CONCEPTUAL</b><span>Diseño, datos y flujos sujetos a validación. No representa el producto final.</span></div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><img src="../assets/overcloud-wordmark.png" alt="Overcloud"><button class="icon-btn mobile-close" id="closeNav">×</button></div>
+      <div class="workspace-switch">
+        <button class="workspace active" data-workspace="kma"><span class="workspace-mark">K</span><span><b>KMA</b><small>Sistema integral</small></span></button>
+        <button class="workspace" data-workspace="halaja"><span class="workspace-mark coral">M</span><span><b>Maor Halajá</b><small>Atención WhatsApp</small></span></button>
+      </div>
+      <nav id="mainNav"></nav>
+      <div class="sidebar-foot">
+        <div class="health"><i></i><span><b>Demo conectado</b><small>Datos ficticios</small></span></div>
+        <button class="support-link" data-action="show-disclaimer">Acerca de este demo</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="top-left"><button class="icon-btn menu-btn" id="openNav">☰</button><div><div class="breadcrumbs" id="breadcrumbs">KMA / Resumen</div><h1 id="pageTitle">Resumen ejecutivo</h1></div></div>
+        <div class="top-actions">
+          <label class="search"><span>⌕</span><input id="globalSearch" placeholder="Buscar en el demo…"></label>
+          <button class="icon-btn notification" data-action="notify">◔<em>3</em></button>
+          <button class="profile" data-action="profile"><span>EA</span><div><b>Eduardo</b><small>Administrador</small></div></button>
+        </div>
+      </header>
+      <section class="content" id="content"></section>
+    </main>
+  </div>
+
+  <div class="toast-stack" id="toasts"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" id="modal" role="dialog" aria-modal="true"></div>
+  </div>
+
+  <template id="disclaimerTemplate">
+    <div class="modal-hero">
+      <span class="demo-chip">DEMO CONCEPTUAL</span>
+      <h2>Una vista para imaginar el sistema</h2>
+      <p>Este prototipo utiliza datos ficticios y flujos simulados. Su objetivo es facilitar la conversación y validar ideas.</p>
+    </div>
+    <div class="notice-grid">
+      <div><b>Sí representa</b><p>La visión, módulos, relaciones y experiencia que proponemos.</p></div>
+      <div><b>No representa</b><p>Diseño final, funciones cerradas, calendario ni aceptación contractual.</p></div>
+    </div>
+    <label class="check-line"><input type="checkbox" id="dontShow"> Entendido, no volver a mostrar en este dispositivo</label>
+    <div class="modal-actions"><button class="btn primary" data-action="close-modal">Explorar el demo</button></div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
